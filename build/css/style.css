@@ -326,7 +326,7 @@ template {
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat-medium/.woff2") format("woff2");
+  src: url("./fonts/montserrat-medium/.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
@@ -550,23 +550,18 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 40px;
-}
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
+  padding: 0 103px;
 }
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 45px;
   }
 }
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 }
 
@@ -1244,6 +1239,51 @@ button,
 }
 .custom-select .input-message.is-valid {
   color: #15ab07;
+}
+
+.header {
+  background-color: #011c40;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__logo-image {
+  fill: #f9fbfd;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  padding: 9px 2px;
+}
+
+.navigation__link {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.navigation__toggle {
+  display: none;
 }
 
 /* @mixin hover-focus {

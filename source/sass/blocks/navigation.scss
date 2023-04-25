@@ -1,0 +1,23 @@
+.navigation__list {
+  display: flex;
+  gap: 32px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  padding: 9px 2px;
+}
+
+.navigation__link {
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}
+
+.navigation__toggle {
+  display: none;
+}

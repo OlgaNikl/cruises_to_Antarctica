@@ -1,0 +1,16 @@
+.header {
+  background-color: $color-tangaroa;
+  // position: absolute;
+  // top: 35px;
+  // left: 0;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo-image {
+  fill: $color-alice-blue;
+}
