@@ -1,0 +1,31 @@
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.toggle__open {
+  position: absolute;
+  top: 9px;
+  right: 3px;
+  width: 24px;
+  height: 14px;
+  background-image: url("../../img/sprite/burger-icon.svg");
+}
+
+.is-open .toggle__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url("../../img/svg/toggle-close.svg");
+  background-position: center;
+  z-index: 20;
+}

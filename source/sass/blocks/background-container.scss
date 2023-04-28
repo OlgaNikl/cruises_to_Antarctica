@@ -1,0 +1,28 @@
+.background-container {
+  background-color: $color-tangaroa;
+  background-image: url("../../img/intro-background-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-background-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/intro-background-tablet.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/intro-background-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../../img/intro-background-mobile.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/intro-background-mobile@2x.jpg);
+    }
+  }
+}

@@ -7,64 +7,145 @@
     <meta name="description" content="Туристический оператор круизов в Антарктику">
     <title>cruises_to_Antarctica</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
-      <!-- <div class="background-container">
-        <div class="background-container__background">
-          <picture>
-            <source media="(max-width:1023px)" srcset="img/intro-background-tablet.jpg 1x, img/intro-background-tablet@2x.jpg 2x">
-            <img class="background-container__image" src="img/intro-background-desktop.jpg" width="1366" height="650" srcset="img/intro-background-desktop@2x.jpg 2x" alt="Изображение заснеженных скалл и моря">
-          </picture>
-        </div>
-      </div> -->
-      <header class="header">
-        <div class="container">
-          <div class="header__wrapper">
-            <a class="header__logo" aria-label="Перейти на главную.">
-              <svg class="header__logo-image" width="70" height="38">
-                <use xlink:href="img/sprite.svg#logo"></use>
-              </svg>
-            </a>
+      <div class="background-container">
+        <header class="header" data-header>
+          <div class="container">
+            <div class="header__wrapper">
+              <a class="header__logo" href="index.html" aria-label="Перейти на главную.">
+                <svg class="header__logo-image" width="70" height="38">
+                  <use xlink:href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
 
-            <nav class="header__navigation navigation">
-              <button class="navigation__toggle" type="button">
-                <span class="visually-hidden">Открыть меню.</span>
+              <button class="header__toggle toggle" type="button" aria-label="Кнопка меню." data-burger>
+                <span class="toggle__open"></span>
+                <span class="toggle__close"></span>
               </button>
-              <div class="navigation__popover">
-                <ul class="navigation__list">
-                  <li class="navigation__item">
-                    <a class="navigation__link" href="#">Преимущества</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a class="navigation__link" href="#">Направления</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a class="navigation__link" href="#">Ближайшие круизы</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a class="navigation__link" href="#">Контакты</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
 
+              <nav class="header__navigation navigation">
+                <div class="navigation__underlay" data-close-menu></div>
+                <div class="navigation__wrapper">
+                  <a class="navigation__logo" href="index.html" aria-label="Перейти на главную.">
+                    <svg class="navigation__logo-image" width="70" height="38">
+                      <use xlink:href="img/sprite.svg#logo"></use>
+                    </svg>
+                  </a>
+                  <ul class="navigation__list">
+                    <li class="navigation__item">
+                      <a class="navigation__link" href="#">Преимущества</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__link" href="#">Направления</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__link" href="#">Ближайшие круизы</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__link" href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+            </div>
           </div>
-        </div>
-      </header>
-      <main>
+        </header>
+
         <section class="intro">
           <div class="container">
-            <h1></h1>
+            <div class="intro__wrapper">
+              <h1 class="intro__title">Круизы в Антарктику</h1>
+              <p class="intro__text">Волшебный мир айсбергов и пингвинов</p>
+            </div>
           </div>
         </section>
+      </div>
+
+      <main>
+        <section class="promotion">
+          <div class="container">
+            <div class="promotion__wrapper">
+              <div class="promotion__text-wrapper">
+                <h2>Путешествие на&nbsp;край Земли</h2>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть:
+                ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+               </p>
+              </div>
+              <div class="promotion__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width:320px)" srcset="img/pinguins-mobile.webp 1x, img/pinguins-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width:767px)" srcset="img/pinguins-tablet.webp 1x, img/ipinguins-tablet.webp 2x">
+                  <source type="image/webp" media="(max-width:1023px)" srcset="img/pinguins-tablet.webp 1x, img/pinguins-tablet.webp 2x">
+                  <source type="image/webp" srcset="img/pinguins-desktop.webp 1x, img/pinguins-desktops@2x.webp 2x">
+                  <source media="(max-width:320px)" srcset="img/pinguins-mobile.jpg 1x, img/pinguins-mobile@2x.jpg 2x">
+                  <source media="(max-width:767px)" srcset="img/pinguins-tablet.jpg 1x, img/pinguins-tablet.jpg 2x">
+                  <source media="(max-width:1023px)" srcset="img/pinguins-tablet.jpg 1x, img/pinguins-tablet@2x.jpg 2x">
+                  <img src="img/pinguins-desktop.jpg" width="560" height="301" srcset="img/pinguins-desktop@2x.jpg 2x" alt="Изображение трех пингвинов на снегу.">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
-      <footer>
-        <div class="container"></div>
+
+      <footer class="footer">
+        <h2 class="visually-hidden">Навигация по сайту и социальные сети.</h2>
+        <div class="container">
+          <div class="footer__wrapper">
+            <ul class="footer__menu">
+              <li class="footer__item">
+                <a class="footer__logo" href="index.html" aria-label="Перейти на главную.">
+                  <svg class="footer__logo-image" width="70" height="38">
+                    <use xlink:href="img/sprite.svg#logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Преимущества</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Направления</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" aria-label="Одноклассники">
+                  <svg class="footer__social-icon footer__social-icon--ok" width="11.75" height="20">
+                    <use xlink:href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" aria-label="Яндекс Дзен">
+                  <svg class="footer__social-icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#dzen"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" aria-label="Reddit">
+                  <svg class="footer__social-icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#reddit"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
 

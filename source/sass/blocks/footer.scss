@@ -1,0 +1,138 @@
+.footer {
+  background-color: $color-tangaroa;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @include vp-1023 {
+    padding-top: 36px;
+    padding-bottom: 28px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 33px;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    gap: 23px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  padding-top: 5px;
+
+  @include vp-1023 {
+    padding-top: 10px;
+  }
+
+  @include vp-767 {
+    padding-top: 5px;
+  }
+}
+
+.footer__logo-image {
+  fill: $color-alice-blue;
+  margin-right: 7px;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+    margin-right: 2px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+}
+
+footer__item {
+  padding: 9px 2px;
+}
+
+.footer__link {
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+  text-align: center;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+
+  @include vp-1023 {
+    margin-top: 5px;
+    gap: 18px;
+  }
+
+  @include vp-767 {
+    margin-top: 15px;
+    gap: 22px;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  padding: 10px 3px;
+
+  @include vp-1023 {
+    padding: 10px 1px;
+  }
+
+  @include vp-767 {
+    padding: 10px 0;
+  }
+}
+
+.footer__social-icon {
+  fill: $color-alice-blue;
+
+  @include vp-1023 {
+    width: 16.42px;
+    height: 16px;
+  }
+}
+
+.footer__social-icon--ok {
+  @include vp-1023 {
+    width: 9.64px;
+    height: 16px;
+  }
+}
