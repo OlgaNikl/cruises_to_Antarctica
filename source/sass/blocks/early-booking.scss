@@ -1,0 +1,64 @@
+.early-booking {
+  background-color: $color-alice-blue;
+  background-image: url("../../img/booking-background-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../../img/booking-background-desktop@2x.jpg);
+  }
+
+  @include vp-1023 {
+    background-image: url(../../img/booking-background-tablet.jpg);
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/booking-background-tablet@2x.jpg);
+    }
+  }
+
+  @include vp-767  {
+    background-image: url(../../img/abooking-background-mobile.jpg);
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/booking-background-mobile@2x.jpg);
+    }
+  }
+}
+
+.early-booking__wrapper {
+  padding: 48px 0 4px;
+  display: flex;
+  gap: 10%;
+  // justify-content: space-between;
+  width: 100%;
+}
+
+.early-booking__text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 166px 20px 178px 60px;
+}
+
+.early-booking__text-wrapper h2 {
+  font-family: $ff-montserrat;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.early-booking__text-wrapper p {
+  font-family: $ff-montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  padding-right: 150px;
+}

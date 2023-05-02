@@ -1,0 +1,119 @@
+.cruise-card {
+  // background-color: $color-tangaroa;
+  position: relative;
+  // width: 260px;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  // @include vp-1023 {
+
+  // }
+
+  // @include vp-767 {
+
+  // }
+
+  &:hover,
+  &:focus {
+    .cruise-card__wrapper {
+      opacity: 100%;
+      // transform: translateX(0);
+      // transition: transform $trans-default;
+      // transition-delay: 0.2s;
+    }
+  }
+}
+
+.cruise-card img {
+  object-fit: contain;
+  z-index: 3;
+
+  @include vp-1023 {
+
+  }
+
+  @include vp-767 {
+
+  }
+}
+
+.cruise-card h3 {
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  top: 338px;
+
+  @include vp-1023 {
+    top: 280px
+  }
+
+  @include vp-767 {
+
+  }
+}
+
+.cruise-card h4 {
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.cruise-card__content {
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.cruise-card__content dl {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.cruise-card__content dt {
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+  margin: 0;
+  // margin-bottom: 5px;
+}
+
+.cruise-card__content dd {
+  font-family: $ff-montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+//внутренний контент //
+.cruise-card__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 25px;
+  z-index: 5;
+  background-color: $color-tangaroa;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.cruise-card__button {
+  width: 100%;
+}

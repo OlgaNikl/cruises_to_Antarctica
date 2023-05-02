@@ -362,7 +362,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Montserrat", "Tahoma", sans-serif;
-  color: #000000;
+  color: #011c40;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -569,9 +569,20 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #f9fbfd;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -1256,6 +1267,8 @@ button,
       flex-wrap: wrap;
   padding-top: 28px;
   padding-bottom: 28px;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 @media (max-width: 1023px) {
   .header__wrapper {
@@ -1267,6 +1280,11 @@ button,
 .header__logo {
   display: block;
   padding-top: 7px;
+}
+@media (max-width: 767px) {
+  .header__logo {
+    padding-top: 0;
+  }
 }
 
 .is-open .header__logo {
@@ -1585,7 +1603,7 @@ footer__item {
 }
 @media (max-width: 767px) {
   .intro__wrapper {
-    padding: 114px 25px 185px 0;
+    padding: 110px 25px 175px 0;
   }
 }
 
@@ -1684,8 +1702,8 @@ footer__item {
 
 .toggle__open {
   position: absolute;
-  top: 9px;
-  right: 3px;
+  top: 7px;
+  right: 0;
   width: 24px;
   height: 14px;
   background-image: url("../../img/sprite/burger-icon.svg");
@@ -1721,6 +1739,8 @@ footer__item {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 58px;
+    padding-bottom: 85px;
   }
 }
 
@@ -1733,6 +1753,7 @@ footer__item {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
+  padding-right: 45px;
 }
 @media (max-width: 1023px) {
   .promotion__text-wrapper {
@@ -1741,6 +1762,7 @@ footer__item {
 }
 @media (max-width: 767px) {
   .promotion__text-wrapper {
+    padding-right: 0;
     width: 100%;
   }
 }
@@ -1765,7 +1787,7 @@ footer__item {
   .promotion__text-wrapper h2 {
     font-size: 24px;
     line-height: 34px;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
   }
 }
 
@@ -1779,7 +1801,7 @@ footer__item {
 }
 @media (max-width: 767px) {
   .promotion__text-wrapper p {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1802,8 +1824,483 @@ footer__item {
 }
 @media (max-width: 767px) {
   .promotion__image-wrapper {
+    padding: 0;
     width: 100%;
   }
+}
+
+.promotion__image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.advantages {
+  background-color: #f9fbfd;
+  background-image: url(../../img/advantages-background-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .advantages {
+    background-image: url(../../img/advantages-background-desktop@2x.jpg);
+  }
+}
+@media (max-width: 1023px) {
+  .advantages {
+    background-image: url(../../img/advantages-background-tablet.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
+  .advantages {
+    background-image: url(../../img/advantages-background-tablet@2x.jpg);
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    background-image: url(../../img/advantages-background-mobile.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .advantages {
+    background-image: url(../../img/advantages-background-mobile@2x.jpg);
+  }
+}
+
+.advantages__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 110px 0 119px;
+}
+@media (max-width: 1023px) {
+  .advantages__wrapper {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__wrapper {
+    padding: 60px 0;
+  }
+}
+
+.advantages__wrapper h2 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+@media (max-width: 1023px) {
+  .advantages__wrapper h2 {
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__wrapper h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+@media (max-width: 1023px) {
+  .advantages__list {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  background-color: #f9fbfd;
+  position: relative;
+}
+
+.advantages__item h3 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  padding: 82px 30px 8px;
+}
+@media (max-width: 1023px) {
+  .advantages__item h3 {
+    line-height: 25px;
+    padding: 76px 16px 20px 20px;
+  }
+}
+
+.advantages__item p {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 30px 44px;
+}
+@media (max-width: 1023px) {
+  .advantages__item p {
+    line-height: 25px;
+    padding: 0 20px 25px;
+  }
+}
+
+.advantages__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  fill: #011c40;
+}
+@media (max-width: 1023px) {
+  .advantages__icon {
+    top: 26px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .advantages__icon--smallship {
+    width: 21px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .advantages__icon--allinclusive {
+    width: 27px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .advantages__icon--zodiac {
+    width: 36px;
+    height: 26px;
+  }
+}
+
+.cruise-catalog {
+  background-color: #ffffff;
+}
+
+.cruise-catalog__wrapper {
+  padding-top: 86px;
+  padding-bottom: 105px;
+}
+@media (max-width: 1023px) {
+  .cruise-catalog__wrapper {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 767px) {
+  .cruise-catalog__wrapper {
+    padding: 60px 0;
+  }
+}
+
+.cruise-catalog__wrapper h2 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.cruise-catalog__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.cruise-catalog__item {
+  padding: 15px;
+}
+
+.cruise-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.cruise-card:hover .cruise-card__wrapper, .cruise-card:focus .cruise-card__wrapper {
+  opacity: 100%;
+}
+
+.cruise-card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 3;
+}
+.cruise-card h3 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  top: 338px;
+}
+@media (max-width: 1023px) {
+  .cruise-card h3 {
+    top: 280px;
+  }
+}
+.cruise-card h4 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.cruise-card__content {
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.cruise-card__content dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+.cruise-card__content dt {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f9fbfd;
+  margin: 0;
+}
+
+.cruise-card__content dd {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f9fbfd;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.cruise-card__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 25px;
+  z-index: 5;
+  background-color: #011c40;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.cruise-card__button {
+  width: 100%;
+}
+
+.early-booking {
+  background-color: #f9fbfd;
+  background-image: url("../../img/booking-background-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .early-booking {
+    background-image: url(../../img/booking-background-desktop@2x.jpg);
+  }
+}
+@media (max-width: 1023px) {
+  .early-booking {
+    background-image: url(../../img/booking-background-tablet.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
+  .early-booking {
+    background-image: url(../../img/booking-background-tablet@2x.jpg);
+  }
+}
+@media (max-width: 767px) {
+  .early-booking {
+    background-image: url(../../img/abooking-background-mobile.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .early-booking {
+    background-image: url(../../img/booking-background-mobile@2x.jpg);
+  }
+}
+
+.early-booking__wrapper {
+  padding: 48px 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
+
+.early-booking__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  padding: 166px 20px 178px 60px;
+}
+
+.early-booking__text-wrapper h2 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.early-booking__text-wrapper p {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  padding-right: 150px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #011c40;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 403px;
+  height: auto;
+  padding: 48px 50px 52px;
+}
+.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 19px;
+}
+.form form input[type=text],
+.form form input[type=tel],
+.form form input[type=email] {
+  width: 100%;
+  padding: 11px 16px;
+  margin: 0;
+  border: none;
+  background-color: #ffffff;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: transparent;
+  text-shadow: 0 0 0 rgba(1, 28, 64, 0.7);
+}
+.form form .form__agreement {
+  position: relative;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #f9fbfd;
+  text-align: center;
+  padding-left: 24px;
+  padding-top: 5px;
+}
+.form form input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form .form__checkbox-mark::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+}
+.form h3 {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  margin: 0;
+  margin-bottom: 26px;
 }
 
 /* @mixin hover-focus {
