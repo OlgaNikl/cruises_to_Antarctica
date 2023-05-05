@@ -1,4 +1,5 @@
 .navigation__list {
+  position: relative;
   display: flex;
   gap: 33px;
   list-style-type: none;
@@ -11,10 +12,50 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 7px;
+    gap: 9px;
     background-color: $color-alice-blue;
     padding: 75px 68px 303px 25px;
     overflow: auto;
+  }
+}
+
+.navigation__overlay {
+  display: none;
+}
+
+.is-open .navigation__overlay {
+  @include vp-767 {
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: $color-prussian-blue-light;
+    position: absolute;
+    top: 0;
+    left: -15px;
+  }
+}
+
+.navigation__logo {
+  display: flex;
+  width: 44px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+
+  &:hover,
+  &:focus .navigation__logo-image {
+    opacity: 0.8;
+  }
+
+  &:focus-visible .navigation__logo-image {
+    outline: 1px solid $color-tangaroa-light;
+    border-radius: 1px;
+  }
+
+  &:active .navigation__logo-image {
+    opacity: 0.8;
   }
 }
 
@@ -22,9 +63,7 @@
   display: none;
 
   @include vp-767 {
-    position: absolute;
-    top: 20px;
-    left: 15px;
+    display: block;
     z-index: 20;
     fill: $color-tangaroa;
     width: 42px;
@@ -76,5 +115,19 @@
     color: $color-tangaroa;
     font-size: 18px;
     line-height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-alice-blue;
+    border-radius: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

@@ -8,6 +8,19 @@
   margin-left: auto;
   background-color: transparent;
   cursor: pointer;
+
+  // &:hover,
+  // &:focus-visible .toggle__open {
+  //   opacity: 0.7;
+  // }
+
+  &:active .toggle__open {
+    opacity: 0.7;
+  }
+
+  // &:active {
+  //   opacity: 0.7;
+  // }
 }
 
 .toggle__open {
@@ -21,7 +34,7 @@
 
 .is-open .toggle__close {
   position: absolute;
-  top: 0;
+  top: 7px;
   right: 0;
   width: 15px;
   height: 15px;
@@ -29,3 +42,15 @@
   background-position: center;
   z-index: 20;
 }
+
+.is-open .toggle {
+  &:hover,
+  &:focus-visible .toggle__close {
+    opacity: 0.7;
+  }
+
+  &:active .toggle__close {
+    opacity: 0.7;
+  }
+}
+

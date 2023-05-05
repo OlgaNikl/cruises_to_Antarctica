@@ -7,11 +7,11 @@
   padding-bottom: 105px;
 
   @include vp-1023 {
-    padding: 100px 0;
+    padding: 90px 0 85px;
   }
 
   @include vp-767 {
-    padding: 60px 0;
+    padding: 58px 0 50px;
   }
 }
 
@@ -23,19 +23,47 @@
   text-align: center;
   margin: 0;
   margin-bottom: 34px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
 }
 
 .cruise-catalog__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
   margin: 0 auto;
   // min-width: 870px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }
 
 .cruise-catalog__item {
   padding: 15px;
+
+  @include vp-767 {
+    padding: 15px 10px;
+  }
 }

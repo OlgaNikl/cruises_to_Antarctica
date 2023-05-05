@@ -1,5 +1,5 @@
-const baseCountryCode = '+7';
-const baseMatrix = ' (___) ___ __ __';
+const baseCountryCode = '8';
+const baseMatrix = '__________';
 const phoneLength = baseCountryCode.length + baseMatrix.length;
 
 const onPhoneInputInput = (e) => {
@@ -43,13 +43,13 @@ const onPhoneInputPaste = (e) => {
   e.target.setSelectionRange(0, 0);
   if (!e.target.selectionStart) {
     setTimeout(() => {
-      if (e.target.value.startsWith('+7')) {
-        return;
-      }
-      if (e.target.value.startsWith('+8')) {
-        e.target.value = `+7 ${e.target.value.slice(3)}`;
-        return;
-      }
+      // if (e.target.value.startsWith('+7')) {
+      //   return;
+      // }
+      // if (e.target.value.startsWith('+8')) {
+      //   e.target.value = `+7 ${e.target.value.slice(3)}`;
+      //   return;
+      // }
       e.target.value = '';
     });
   }

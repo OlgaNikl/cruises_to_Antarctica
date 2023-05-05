@@ -3,10 +3,20 @@
   flex-direction: column;
   background-color: $color-tangaroa;
   justify-content: flex-start;
-  // width: 50%;
+  // width: 38%;
   width: 403px;
   height: auto;
   padding: 48px 50px 52px;
+
+  @include vp-1023 {
+    margin: 0 auto;
+    padding: 42px 50px 52px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 36px 30px;
+  }
 
   form {
     display: flex;
@@ -26,7 +36,11 @@
       font-size: 14px;
       line-height: 21px;
       color: transparent;
-      text-shadow: 0 0 0 $color-tangaroa-light;
+      text-shadow: 0 0 0 $color-tangaroa      ;
+    }
+
+    &::placeholder {
+      color: $color-tangaroa-light;
     }
 
     .form__agreement {
@@ -39,10 +53,21 @@
       text-align: center;
       padding-left: 24px;
       padding-top: 5px;
+
+      @include vp-767 {
+        text-align: left;
+        padding: 0 50px 8px 30px;
+      }
     }
 
     input[type="checkbox"] {
       appearance: none;
+
+      &:checked + .form__checkbox-mark::before {
+        background-image: url("../img/svg/checkbox-mark.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
   }
 
@@ -54,6 +79,10 @@
     width: 18px;
     height: 18px;
     background-color: $color-default-white;
+
+    @include vp-767 {
+      top: 4px;
+    }
   }
 
   h3 {
@@ -64,5 +93,27 @@
     color: $color-alice-blue;
     margin: 0;
     margin-bottom: 26px;
+
+    @include vp-1023 {
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  .form__button {
+    @include vp-767 {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
+  .input-message {
+    font-family: inherit;
+    font-size: 10px;
+    color: $color-alice-blue;
   }
 }
