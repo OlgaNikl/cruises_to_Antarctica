@@ -8,6 +8,10 @@
 
 .navigation__wrapper {
   max-width: 1160px;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -80,12 +84,6 @@
     fill: $color-tangaroa;
     width: 42px;
     height: 22px;
-  }
-}
-
-.navigation__wrapper {
-  @include vp-767 {
-    display: none;
   }
 }
 
