@@ -1,5 +1,5 @@
 .background-container {
-  background-color: $color-tangaroa;
+  background-color: $color-prussian-blue;
   background-image: url("../../img/intro-background-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../../img/intro-background-mobile@2x.jpg);
+      background-image: url("../../img/intro-background-mobile@2x.jpg");
     }
   }
 }
