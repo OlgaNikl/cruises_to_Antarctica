@@ -1,5 +1,4 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/burger/burger';
 import {initSmoothScroll} from './modules/smooth-scroll/init-smooth-scroll';
@@ -22,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     const burger = new Burger();
     burger.init();
-    initModals();
     const form = new Form();
     window.form = form;
     form.init();

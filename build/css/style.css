@@ -604,6 +604,9 @@ button,
 .btn.focus-visible:focus {
   opacity: 0.8;
 }
+.btn.focus-visible:active {
+  opacity: 0.3;
+}
 
 .modal {
   position: fixed;
@@ -761,10 +764,10 @@ button,
             flex-direction: column;
   }
 }
-.custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
+.custom-input input,
+.custom-input textarea,
+.custom-textarea input,
+.custom-textarea textarea {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -780,24 +783,24 @@ button,
   transition: border 0.3s ease;
 }
 @media screen and (max-width: 767px) {
-  .custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
+  .custom-input input,
+.custom-input textarea,
+.custom-textarea input,
+.custom-textarea textarea {
     max-width: unset;
     width: 100%;
   }
 }
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
+.custom-input input:hover,
+.custom-input textarea:hover,
+.custom-textarea input:hover,
+.custom-textarea textarea:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
+.custom-input input:focus,
+.custom-input textarea:focus,
+.custom-textarea input:focus,
+.custom-textarea textarea:focus {
   border: 2px solid rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 767px) {
@@ -1344,6 +1347,11 @@ button,
 .navigation__wrapper {
   max-width: 1160px;
 }
+@media (max-width: 767px) {
+  .navigation__wrapper {
+    display: none;
+  }
+}
 
 .navigation__list {
   width: 100%;
@@ -1430,12 +1438,6 @@ button,
     fill: #011c40;
     width: 42px;
     height: 22px;
-  }
-}
-
-@media (max-width: 767px) {
-  .navigation__wrapper {
-    display: none;
   }
 }
 
@@ -2577,9 +2579,9 @@ button,
           flex-direction: column;
   gap: 19px;
 }
-.form form input[type=text],
-.form form input[type=tel],
-.form form input[type=email] {
+.form input[type=text],
+.form input[type=tel],
+.form input[type=email] {
   width: 100%;
   padding: 11px 16px;
   margin: 0;
@@ -2592,22 +2594,22 @@ button,
   color: transparent;
   text-shadow: 0 0 0 #011c40;
 }
-.form form::-webkit-input-placeholder {
+.form::-webkit-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
-.form form::-moz-placeholder {
+.form::-moz-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
-.form form:-ms-input-placeholder {
+.form:-ms-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
-.form form::-ms-input-placeholder {
+.form::-ms-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
-.form form::placeholder {
+.form::placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
-.form form .form__agreement {
+.form .form__agreement {
   position: relative;
   font-family: "Montserrat", "Tahoma", sans-serif;
   font-weight: 400;
@@ -2619,22 +2621,22 @@ button,
   padding-top: 5px;
 }
 @media (max-width: 767px) {
-  .form form .form__agreement {
+  .form .form__agreement {
     text-align: left;
     padding: 0 50px 8px 30px;
   }
 }
-.form form input[type=checkbox] {
+.form input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.form form input[type=checkbox]:checked + .form__checkbox-mark::before {
+.form input[type=checkbox]:checked + .form__checkbox-mark::before {
   background-image: url("../img/svg/checkbox-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.form form input[type=checkbox]:hover + .form__checkbox-mark::before, .form form input[type=checkbox]:focus + .form__checkbox-mark::before, .form form input[type=checkbox]:focus-visible + .form__checkbox-mark::before {
+.form input[type=checkbox]:hover + .form__checkbox-mark::before, .form input[type=checkbox]:focus + .form__checkbox-mark::before, .form input[type=checkbox]:focus-visible + .form__checkbox-mark::before {
   -webkit-box-shadow: inset 0 0 0 2px rgba(0, 43, 102, 0.5);
           box-shadow: inset 0 0 0 2px rgba(0, 43, 102, 0.5);
 }
