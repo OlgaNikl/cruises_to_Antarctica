@@ -53,11 +53,11 @@
     padding: 9px 2px;
   }
 
-  @mixin hover-focus {
+  @include hover-focus {
     opacity: 0.8;
   }
 
-  @mixin active {
+  @include active {
     opacity: 0.3;
   }
 }

@@ -18,33 +18,24 @@
   }
 }
 
-.toggle__open {
+.toggle__open::before {
+  content: "";
   position: absolute;
   top: 7px;
   right: 0;
   width: 24px;
   height: 14px;
-  background-image: url("../../img/sprite/burger-icon.svg");
+  background-image: url("../img/sprite/burger-icon.svg");
 }
 
-.is-open .toggle__close {
+.is-open .toggle__close::before {
+  content: "";
   position: absolute;
   top: 7px;
   right: 0;
   width: 15px;
   height: 15px;
-  background-image: url("../../img/svg/toggle-close.svg");
+  background-image: url("../img/svg/toggle-close.svg");
   background-position: center;
   z-index: 20;
 }
-
-// .is-open .toggle {
-//   &:hover,
-//   &:focus-visible .toggle__close {
-//     opacity: 0.7;
-//   }
-
-//   &:active .toggle__close {
-//     opacity: 0.7;
-//   }
-// }

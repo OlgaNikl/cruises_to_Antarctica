@@ -23,7 +23,8 @@
 }
 
 .cruise-card img {
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
   z-index: 3;
   min-width: 260px;
   min-height: 386px;

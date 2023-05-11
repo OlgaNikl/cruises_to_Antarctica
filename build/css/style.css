@@ -1575,6 +1575,17 @@ button,
     padding: 9px 2px;
   }
 }
+@media (hover: hover) {
+  .footer__logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.footer__logo.focus-visible:focus {
+  opacity: 0.8;
+}
+.footer__logo.focus-visible:active {
+  opacity: 0.3;
+}
 
 .footer__logo-image {
   fill: #f9fbfd;
@@ -1774,35 +1785,35 @@ button,
 
 .background-container {
   background-color: #002b66;
-  background-image: url("../../img/intro-background-desktop.jpg");
+  background-image: url("../img/intro-background-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .background-container {
-    background-image: url("../../img/intro-background-desktop@2x.jpg");
+    background-image: url("../img/intro-background-desktop@2x.jpg");
   }
 }
 @media (max-width: 1023px) {
   .background-container {
-    background-image: url("../../img/intro-background-tablet.jpg");
+    background-image: url("../img/intro-background-tablet.jpg");
     background-size: cover;
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .background-container {
-    background-image: url("../../img/intro-background-tablet@2x.jpg");
+    background-image: url("../img/intro-background-tablet@2x.jpg");
   }
 }
 @media (max-width: 767px) {
   .background-container {
-    background-image: url("../../img/intro-background-mobile.jpg");
+    background-image: url("../img/intro-background-mobile.webp");
     background-size: cover;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .background-container {
-    background-image: url("../../img/intro-background-mobile@2x.jpg");
+    background-image: url("../img/intro-background-mobile@2x.webp");
   }
 }
 
@@ -1818,22 +1829,24 @@ button,
   cursor: pointer;
 }
 
-.toggle__open {
+.toggle__open::before {
+  content: "";
   position: absolute;
   top: 7px;
   right: 0;
   width: 24px;
   height: 14px;
-  background-image: url("../../img/sprite/burger-icon.svg");
+  background-image: url("../img/sprite/burger-icon.svg");
 }
 
-.is-open .toggle__close {
+.is-open .toggle__close::before {
+  content: "";
   position: absolute;
   top: 7px;
   right: 0;
   width: 15px;
   height: 15px;
-  background-image: url("../../img/svg/toggle-close.svg");
+  background-image: url("../img/svg/toggle-close.svg");
   background-position: center;
   z-index: 20;
 }
@@ -1954,35 +1967,35 @@ button,
 
 .advantages {
   background-color: #f9fbfd;
-  background-image: url("../../img/advantages-background-desktop.jpg");
+  background-image: url("../img/advantages-background-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .advantages {
-    background-image: url("../../img/advantages-background-desktop@2x.jpg");
+    background-image: url("../img/advantages-background-desktop@2x.jpg");
   }
 }
 @media (max-width: 1023px) {
   .advantages {
-    background-image: url("../../img/advantages-background-tablet.jpg");
+    background-image: url("../img/advantages-background-tablet.jpg");
     background-size: cover;
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .advantages {
-    background-image: url("../../img/advantages-background-tablet@2x.jpg");
+    background-image: url("../img/advantages-background-tablet@2x.jpg");
   }
 }
 @media (max-width: 767px) {
   .advantages {
-    background-image: url("../../img/advantages-background-mobile.jpg");
+    background-image: url("../img/advantages-background-mobile.jpg");
     background-size: cover;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .advantages {
-    background-image: url("../../img/advantages-background-mobile@2x.jpg");
+    background-image: url("../img/advantages-background-mobile@2x.jpg");
   }
 }
 
@@ -2220,9 +2233,8 @@ button,
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin: 0;
 }
 @media (max-width: 1023px) {
   .cruise-catalog__list {
@@ -2271,8 +2283,9 @@ button,
 }
 
 .cruise-card img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 3;
   min-width: 260px;
   min-height: 386px;
@@ -2406,35 +2419,35 @@ button,
 
 .early-booking {
   background-color: #f9fbfd;
-  background-image: url("../../img/booking-background-desktop.jpg");
+  background-image: url("../img/booking-background-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .early-booking {
-    background-image: url("../../img/booking-background-desktop@2x.jpg");
+    background-image: url("../img/booking-background-desktop@2x.jpg");
   }
 }
 @media (max-width: 1023px) {
   .early-booking {
-    background-image: url("../../img/booking-background-tablet.jpg");
+    background-image: url("../img/booking-background-tablet.jpg");
     background-size: cover;
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .early-booking {
-    background-image: url("../../img/booking-background-tablet@2x.jpg");
+    background-image: url("../img/booking-background-tablet@2x.jpg");
   }
 }
 @media (max-width: 767px) {
   .early-booking {
-    background-image: url("../../img/booking-background-mobile.jpg");
+    background-image: url("../img/booking-background-mobile.webp");
     background-size: cover;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .early-booking {
-    background-image: url("../../img/booking-background-mobile@2x.jpg");
+    background-image: url("../img/booking-background-mobile@2x.webp");
   }
 }
 
