@@ -3,25 +3,32 @@
 }
 
 .footer__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr  0.3fr;
+  gap: 20px;
+  // display: flex;
+  // justify-content: space-between;
   padding-top: 37px;
   padding-bottom: 32px;
 
   @include vp-1023 {
     padding-top: 30px;
     padding-bottom: 28px;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 5%;
   }
 
   @include vp-767 {
-    flex-direction: column;
+    // flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
 .footer__menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  column-gap: 29px;
+  row-gap: 20px;
   align-items: center;
   list-style-type: none;
   margin: 0;
@@ -113,12 +120,14 @@
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  column-gap: 21px;
+  // row-gap: 20px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 6px;
+  // margin-top: 6px;
 
   @include vp-1023 {
     margin-top: 5px;
@@ -127,12 +136,13 @@
 
   @include vp-767 {
     gap: 22px;
+    justify-content: flex-start;
   }
 }
 
 .footer__social-link {
   display: flex;
-  padding: 10px 3px;
+  padding: 10px 2px;
 
   @include vp-1023 {
     padding: 10px 1px;
@@ -158,6 +168,10 @@
     width: 16.42px;
     height: 16px;
   }
+}
+
+.footer__social-link--ok {
+  padding: 10px 6px;
 }
 
 .footer__social-icon--ok {

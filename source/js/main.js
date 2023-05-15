@@ -11,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  const burger = new Burger();
+  burger.init();
 
   // Modules
   // ---------------------------------
@@ -19,8 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initSmoothScroll();
-    const burger = new Burger();
-    burger.init();
     const form = new Form();
     window.form = form;
     form.init();

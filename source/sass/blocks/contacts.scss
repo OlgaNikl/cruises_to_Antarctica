@@ -87,7 +87,7 @@
 .contacts__address-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 73px 0 70px 63px;
+  padding: 75px 0 70px 63px;
   width: 50%;
 
   @include vp-1023 {
@@ -112,9 +112,17 @@
   }
 }
 
+.contacts__text--address {
+  position: relative;
+  display: flex;
+  margin: 0;
+}
+
 .contacts__link {
   position: relative;
   display: flex;
+  color: $color-tangaroa;
+  max-width: max-content;
 
   @include hover-focus {
     opacity: 0.8;
@@ -136,7 +144,7 @@
   }
 }
 
-.contacts__link-text {
+.contacts__text {
   font-family: $ff-montserrat;
   font-weight: 400;
   font-size: 16px;

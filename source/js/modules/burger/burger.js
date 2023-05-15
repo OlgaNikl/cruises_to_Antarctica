@@ -1,5 +1,6 @@
-import {ScrollLock} from '../../utils/scroll-lock';
-import {FocusLock} from '../../utils/focus-lock';
+import {ScrollLock} from './../../utils/scroll-lock';
+import {FocusLock} from './../../utils/focus-lock';
+
 
 export class Burger {
   constructor() {
@@ -12,6 +13,7 @@ export class Burger {
     this._onBurgerClick = this._onBurgerClick.bind(this);
     this._onDocumentKeydown = this._onDocumentKeydown.bind(this);
     this._onDocumentClick = this._onDocumentClick.bind(this);
+    this._onLinkClick = this._onLinkClick.bind(this);
   }
 
   init() {
@@ -28,6 +30,7 @@ export class Burger {
     this._scrollLock.disableScrolling();
     document.addEventListener('keydown', this._onDocumentKeydown);
     document.addEventListener('click', this._onDocumentClick);
+    document.addEventListener('click', this._onLinkClick);
     this._focusLock.lock('[data-header]');
     if (window.ls) {
       window.ls.stop();
@@ -41,6 +44,7 @@ export class Burger {
     this._focusLock.unlock('[data-header]');
     document.removeEventListener('keydown', this._onDocumentKeydown);
     document.removeEventListener('click', this._onDocumentClick);
+    document.removeEventListener('click', this._onLinkClick);
     if (window.ls) {
       window.ls.start();
     }
@@ -62,6 +66,12 @@ export class Burger {
 
   _onDocumentClick(evt) {
     if (evt.target.hasAttribute('data-close-menu')) {
+      this._closeMenu();
+    }
+  }
+
+  _onLinkClick(evt) {
+    if (evt.target.hasAttribute('href') && evt.target.getAttribute('href')) {
       this._closeMenu();
     }
   }

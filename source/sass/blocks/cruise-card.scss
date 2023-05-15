@@ -15,7 +15,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     .cruise-card__wrapper {
       opacity: 100%;
     }
@@ -37,7 +38,7 @@
   @include vp-767 {
     width: 100%;
     object-fit: cover;
-    max-height: 386px;
+    // height: auto;
   }
 }
 
@@ -123,6 +124,8 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  aspect-ratio: 1 / 1.4;
+  overflow-y: auto;
 
   @include vp-1023 {
     padding: 30px 35px;
