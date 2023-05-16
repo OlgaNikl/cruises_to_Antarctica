@@ -6,10 +6,12 @@ export function initSmoothScroll() {
   anchors.forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      let anchorID = anchor.getAttribute('href');
-      document.querySelector(anchorID).scrollIntoView({
-        behavior: 'smooth', block: 'start',
-      });
+      setTimeout(() => {
+        let anchorID = anchor.getAttribute('href');
+        document.querySelector(anchorID).scrollIntoView({
+          behavior: 'smooth', block: 'start',
+        });
+      }, 50);
     });
   });
 }

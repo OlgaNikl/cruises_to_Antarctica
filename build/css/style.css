@@ -1285,6 +1285,7 @@ button,
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -1511,25 +1512,25 @@ button,
 .footer__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 0.3fr;
-  grid-template-columns: 1fr 0.3fr;
-  gap: 20px;
-  padding-top: 37px;
+  -ms-grid-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  padding-top: 47px;
   padding-bottom: 32px;
 }
 @media (max-width: 1023px) {
   .footer__wrapper {
-    padding-top: 30px;
+    padding-top: 37px;
     padding-bottom: 28px;
-    -ms-grid-columns: 1fr 0.3fr;
-    grid-template-columns: 1fr 0.3fr;
-    gap: 5%;
+    -ms-grid-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
   }
 }
 @media (max-width: 767px) {
   .footer__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 
@@ -1542,17 +1543,17 @@ button,
   -webkit-column-gap: 29px;
      -moz-column-gap: 29px;
           column-gap: 29px;
-  row-gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-left: 32px;
 }
 @media (max-width: 1023px) {
   .footer__menu {
-    gap: 16px;
+    padding-left: 14px;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -1565,13 +1566,12 @@ button,
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 8px;
-    margin-bottom: 16px;
+    padding: 0;
   }
 }
 
 .footer__logo {
   display: block;
-  padding-top: 5px;
   padding-right: 5px;
 }
 @media (max-width: 1023px) {
@@ -1582,7 +1582,7 @@ button,
 }
 @media (max-width: 767px) {
   .footer__logo {
-    padding: 9px 2px;
+    padding: 2px 2px;
   }
 }
 @media (hover: hover) {
@@ -1659,28 +1659,29 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-column-gap: 21px;
      -moz-column-gap: 21px;
           column-gap: 21px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  min-width: 114px;
+  max-width: 240px;
 }
 @media (max-width: 1023px) {
   .footer__social-list {
     margin-top: 5px;
     gap: 19px;
+    min-width: 94px;
+    max-width: 150px;
   }
 }
 @media (max-width: 767px) {
   .footer__social-list {
-    gap: 22px;
+    gap: 20px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -1727,6 +1728,11 @@ button,
 
 .footer__social-link--ok {
   padding: 10px 6px;
+}
+@media (max-width: 767px) {
+  .footer__social-link--ok {
+    padding: 0 2px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -2286,7 +2292,8 @@ button,
   .cruise-catalog__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -2304,7 +2311,7 @@ button,
   position: relative;
   z-index: 1;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
 }
 @media (max-width: 1023px) {
@@ -2391,10 +2398,24 @@ button,
   margin: 0;
   margin-bottom: 12px;
 }
+@media (max-width: 767px) {
+  .cruise-card h4 {
+    margin-bottom: 0;
+  }
+}
 
 .cruise-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
-  margin-bottom: 14px;
 }
 
 .cruise-card__content dl {
@@ -2408,6 +2429,7 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 14px;
 }
 
 .cruise-card__content dt {
@@ -2444,12 +2466,25 @@ button,
 }
 @media (max-width: 1023px) {
   .cruise-card__wrapper {
-    padding: 30px 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 35px 33px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media (max-width: 767px) {
   .cruise-card__wrapper {
-    padding: 30px 25px;
+    padding: 30px 25px 35px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -2510,7 +2545,7 @@ button,
 }
 @media (max-width: 767px) {
   .early-booking__wrapper {
-    padding: 58px 0 66px;
+    padding: 60px 0 66px;
   }
 }
 
@@ -2620,7 +2655,7 @@ button,
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 403px;
-  max-height: 550px;
+  max-height: 500px;
   padding: 48px 50px 52px;
 }
 @media (max-width: 1023px) {
@@ -2704,7 +2739,7 @@ button,
 @media (max-width: 767px) {
   .form .form__agreement {
     text-align: left;
-    padding: 0 50px 8px 30px;
+    padding: 0 50px 7px 30px;
   }
 }
 .form input[type=checkbox] {
@@ -2765,7 +2800,6 @@ button,
 }
 .form .input-message {
   font-family: inherit;
-  font-size: 10px;
   color: #f9fbfd;
 }
 
